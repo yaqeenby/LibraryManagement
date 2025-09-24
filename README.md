@@ -2,7 +2,7 @@
 
 ## 📦 Project
 
-A simple Angular application to manage books and their categories.
+A simple .Net ASP & Angular application to manage books and their categories.
 Books can belong to multiple categories, and users can add, edit, search, and filter both books and categories.
 
 ---
@@ -132,3 +132,4 @@ However, due to my limited subscription, I couldn’t rely on them throughout th
 1. Open SQL Server.
 2. Run the script inside `/db/library_db.sql`.
 3. Database will be created with tables and stored procedures.
+
