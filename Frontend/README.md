@@ -1,27 +1,66 @@
-# Frontend
+# LibraryManagement
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.5.
+## 📦 Project
 
-## Development server
+Angular application for manage library of books and categories.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+---
 
-## Code scaffolding
+## 🚀 Features
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+-📚 Books Management – Add, edit, delete, and view books with detailed information
 
-## Build
+-🏷️ Categories Management – Create, update, and remove categories for better organization
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+-🔗 Book Categorization – Assign one or multiple categories to each book for flexible grouping
 
-## Running unit tests
+-🔍 Search & Filtering – Quickly find books or categories by title, author, or category
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+-📑 Category-based Book View – Browse books by selected categories for focused exploration
 
-## Running end-to-end tests
+---
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## 🛠️ Tech Stack
 
-## Further help
+- Angular v19+.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+---
+
+## 🧾 Assumptions Made
+
+- User authentication is handled externally. The app assumes that a valid user session or token already exists and does not include login or authentication logic.
+
+- No CSS framework (like Bootstrap or Tailwind) was specified in the instructions, so I implemented the required styles manually using SCSS for full control and customization.
+
+- Assumed API returns paginated responses
+
+## 📌 Important Note
+
+
+
+## 📦 Setup Instructions
+
+### ✅ Prerequisites
+
+- Node v20+
+- Angular CLI v19+
+- Package Manager v10+
+
+---
+
+### 🔧 Installation
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/yaqeenby/LibraryManagement.git
+
+# 2. Navigate to the project
+cd Frontend
+
+# 3. Install dependencies
+npm install
+```
+
+### Run
+
+Run `npm start` and then navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
