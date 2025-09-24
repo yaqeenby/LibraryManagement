@@ -1,0 +1,174 @@
+@use "variables" as *;
+@use "sass:color";
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  border-radius: $space-10;
+  cursor: pointer;
+
+  .icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $btn-nav-prim-bkg;
+    color: $btn-nav-prim-text;
+  }
+
+  .label {
+    color: $btn-nav-prim-text;
+  }
+
+  &:hover {
+    .icon {
+      background-color: color.adjust($btn-nav-prim-text, $lightness: -15%);
+      color: black;
+    }
+
+    .label {
+      color: color.adjust($btn-nav-prim-text, $lightness: -15%);
+    }
+  }
+
+  &.big {
+    padding: $space-5 $space-15;
+    gap: $space-20;
+    flex-direction: row;
+
+    .icon {
+      width: $space-32;
+      height: $space-32;
+      border-radius: $space-10;
+
+      img {
+        width: $space-26-7;
+        height: $space-26-7;
+      }
+    }
+
+    .label {
+      font-size: $font-12;
+    }
+  }
+
+  &.small {
+    width: $space-96;
+    height: $space-48;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    overflow: hidden;
+    white-space: nowrap;
+    gap: $space-10;
+    flex-direction: column;
+    height: $space-96;
+    justify-content: center;
+    border-radius: $space-8;
+
+    .icon {
+      width: $space-48;
+      height: $space-48;
+      border-radius: $space-15;
+
+      img {
+        width: $space-32;
+        height: $space-32;
+      }
+    }
+
+    .label {
+      font-size: $font-12;
+    }
+
+    &.child {
+      padding: $space-5 $space-15;
+      gap: $space-20;
+      flex-direction: row;
+      justify-content: unset;
+      height: unset;
+      width: 100%;
+
+      .icon {
+        width: $space-32;
+        height: $space-32;
+        border-radius: $space-10;
+
+        img {
+          width: $space-26-7;
+          height: $space-26-7;
+        }
+      }
+
+      .label {
+        font-size: $font-13;
+      }
+    }
+  }
+
+  &.mobile {
+    padding: $space-5 $space-15;
+    gap: $space-20;
+    flex-direction: row;
+
+    .icon {
+      width: $space-32;
+      height: $space-32;
+      border-radius: $space-10;
+
+      img {
+        width: $space-26-7;
+        height: $space-26-7;
+      }
+    }
+
+    .label {
+      font-size: $font-13;
+    }
+  }
+
+  &.shortcut {
+    padding: $space-10 0;
+    gap: $space-5;
+    flex-direction: row;
+
+    .icon {
+      width: $space-48;
+      height: $space-48;
+      border-radius: $space-15;
+
+      img {
+        width: $space-32;
+        height: $space-32;
+      }
+    }
+
+    .label {
+      font-size: $font-12;
+    }
+  }
+
+  &.selected {
+    .icon {
+      box-shadow: 0 $space-1 $space-1 0 #02001799;
+      background-color: $btn-nav-prim-bkg-click-focus;
+      color: black;
+    }
+
+    .label {
+      font-size: $font-12;
+      font-weight: 700;
+      color: $btn-nav-prim-bkg-click-focus;
+    }
+  }
+  // &.child {
+  //   padding-left: 0;
+  // }
+
+  .item-action {
+    border-radius: $space-8;
+    padding: $space-5;
+    background-color: $primary-tint;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

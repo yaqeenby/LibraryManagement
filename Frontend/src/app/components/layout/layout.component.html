@@ -1,0 +1,124 @@
+
+<div class="layout">
+  <!-- Desktop Sidebar -->
+  <aside class="sidebar" [class.collapsed]="isCollapsed">
+    <div class="d-flex flex-column gap-20">
+      <div class="logo-img d-flex align-items-center justify-content-center">
+        <img class="full-logo"
+             src="../../../assets/logos/full-logo.png"
+             *ngIf="!isCollapsed" />
+        <img class="logo" src="../../../assets/logos/logo.png" *ngIf="isCollapsed" />
+      </div>
+
+      <div class="toggle-btn">
+        <button (click)="toggleSidebar()">
+          <mat-icon>menu</mat-icon>
+        </button>
+      </div>
+    </div>
+
+    <div class="menu-container">
+      <ng-container *ngIf="!isCollapsed; else tieredmenu">
+        <div class="d-flex flex-column gap-30">
+          <ng-container *ngFor="let item of activeRoutingService.routes">
+            <app-sidebar-menu-item variant="big"
+                                   [item]="item"
+                                   [selected]="isActive(item.id)"></app-sidebar-menu-item>
+          </ng-container>
+        </div>
+      </ng-container>
+      <ng-template #tieredmenu>
+        <div class="d-flex flex-column gap-30">
+          <ng-container *ngFor="let item of activeRoutingService.routes">
+            <app-sidebar-menu-item variant="small"
+                                   [item]="item"
+                                   [selected]="isActive(item.id)"></app-sidebar-menu-item>
+          </ng-container>
+        </div>
+      </ng-template>
+    </div>
+
+    <div class="user d-flex flex-row">
+      <img src="../assets/images/dummy-user-img.png"
+           class="user-img"
+           width="40"
+           height="40" />
+      <div class="d-flex flex-column" *ngIf="!isCollapsed">
+        <label class="user-name">John Doe</label>
+        <label class="user-role">Admin</label>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Mobile Overlay Sidebar -->
+  <div class="mobile-header d-flex align-items-center gap-30"
+       (click)="toggleMobileSidebar()">
+    <img class="logo" src="../assets/logos/logo.png" />
+
+    <app-sidebar-menu-item variant="shortcut"
+                         [item]="{
+      id: activeRoutingService.activeRoute,
+      label: activeRoutingService.activeRoute,
+      icon: activeRoutingService.activeRouteIcon
+    }"
+                         [selected]="true"></app-sidebar-menu-item>
+
+    <div class="user d-flex flex-row ml-auto">
+      <img src="../assets/images/dummy-user-img.png"
+           class="user-img"
+           width="40"
+           height="40" />
+    </div>
+    <button class="p-button-text"><mat-icon>menu</mat-icon></button>
+  </div>
+
+  <div class="overlay"
+       *ngIf="showMobileSidebar"
+       (click)="toggleMobileSidebar()"></div>
+
+  <!-- Top Sidebar -->
+  <aside class="top-sidebar" [class.open]="showMobileSidebar">
+    <div class="logo-img d-flex align-items-center justify-content-between">
+      <img class="logo" src="../assets/logos/logo.png" />
+
+      <div class="close-btn">
+        <button (click)="toggleMobileSidebar()"><mat-icon>close</mat-icon></button>
+      </div>
+    </div>
+
+    <div class="menu-container">
+      <div class="d-flex flex-column gap-30">
+        <ng-container *ngFor="let item of activeRoutingService.routes">
+          <app-sidebar-menu-item variant="mobile"
+                                 [item]="item"
+                                 [selected]="isActive(item.id)"></app-sidebar-menu-item>
+        </ng-container>
+      </div>
+    </div>
+
+    <div class="user d-flex flex-row">
+      <img src="../assets/images/dummy-user-img.png"
+           class="user-img"
+           width="40"
+           height="40" />
+      <div class="d-flex flex-column">
+        <label class="user-name">John Doe</label>
+        <label class="user-role">Admin</label>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="content" [class.collapsed]="isCollapsed">
+    <router-outlet></router-outlet>
+  </main>
+</div>
+
+<!--
+//user profile
+image same on all just remove text and parent style
+
+div with padding x and gap 15
+
+
+................................... -->

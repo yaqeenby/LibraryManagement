@@ -1,0 +1,13 @@
+<app-dialog-template title="Add Category" action="Save" (onActionClicked)="onSubmit()" (onCloseClicked)="onClose()">
+  <form class="d-flex flex-column gap-15" [formGroup]="categoryForm" content>
+
+    <mat-form-field appearance="outline" class="w-100">
+      <mat-label>Name</mat-label>
+      <input matInput formControlName="name" />
+      <mat-error *ngIf="categoryForm.get('name')?.touched && categoryForm.get('name')?.invalid">
+        Name is required
+      </mat-error>
+    </mat-form-field>
+
+  </form>
+</app-dialog-template>

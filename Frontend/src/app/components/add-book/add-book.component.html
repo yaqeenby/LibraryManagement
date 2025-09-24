@@ -1,0 +1,29 @@
+<app-dialog-template title="Add Book" action="Save" (onActionClicked)="onSubmit()" (onCloseClicked)="onClose()">
+  <form class="d-flex flex-column gap-15" [formGroup]="bookForm" content>
+
+    <mat-form-field appearance="outline" class="w-100">
+      <mat-label>Title</mat-label>
+      <input matInput formControlName="title" />
+      <mat-error *ngIf="bookForm.get('title')?.touched && bookForm.get('title')?.invalid">
+        Title is required
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="w-100">
+      <mat-label>Author</mat-label>
+      <input matInput formControlName="author" />
+      <mat-error *ngIf="bookForm.get('author')?.touched && bookForm.get('author')?.invalid">
+        Author is required
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="w-100">
+      <mat-label>Select Categories</mat-label>
+      <mat-select formControlName="categories" multiple>
+        <mat-option *ngFor="let category of categories" [value]="category.id">
+          {{ category.name }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </form>
+</app-dialog-template>

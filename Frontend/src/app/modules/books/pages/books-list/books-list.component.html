@@ -1,0 +1,8 @@
+<app-view-books title="All Books"
+                desc="{{books.length}} Books"
+                [books]="books"
+                [bookTitles]="bookTitles"
+                [categories]="categories"
+                (reloadBooks)="loadBooks($event)"></app-view-books>
+
+

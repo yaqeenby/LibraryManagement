@@ -1,0 +1,8 @@
+.full-width {
+  width: 100%;
+}
+
+mat-card {
+  margin: $space-20;
+  padding: $space-20;
+}

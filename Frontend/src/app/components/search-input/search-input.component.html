@@ -1,0 +1,20 @@
+<mat-form-field class="search-field" appearance="outline">
+  <mat-icon matPrefix>search</mat-icon>
+
+  <input matInput
+         [placeholder]="placeholder"
+         [formControl]="control"
+         [matAutocomplete]="auto"
+         aria-label="Search input" />
+
+  <!-- clear button -->
+  <button *ngIf="control.value" matSuffix mat-icon-button aria-label="Clear" (click)="onClear()">
+    <mat-icon>close</mat-icon>
+  </button>
+
+  <mat-autocomplete #auto="matAutocomplete" (optionSelected)="onOptionSelected($event.option.value)">
+    <mat-option *ngFor="let option of filteredOptions$ | async" [value]="option">
+      {{ option }}
+    </mat-option>
+  </mat-autocomplete>
+</mat-form-field>

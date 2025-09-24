@@ -1,0 +1,15 @@
+<mat-card class="status-card">
+  <div class="icon-container" *ngIf="icon">
+    <mat-icon class="icon">{{icon}}</mat-icon>
+  </div>
+
+  <div class="count-text" *ngIf="title">
+    {{title}}
+  </div>
+
+  <div class="status-text" *ngIf="desc">
+    {{desc}}
+  </div>
+
+  <ng-content [select]="actions"></ng-content>
+</mat-card>

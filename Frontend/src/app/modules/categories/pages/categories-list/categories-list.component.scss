@@ -1,0 +1,17 @@
+@use "variables" as *;
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(136px, 1fr));
+  gap: $space-20;
+}
+
+.delete {
+  border: none;
+  border-left: $space-1 solid;
+  border-radius: 0;
+}
+
+.edit {
+  border: none;
+}

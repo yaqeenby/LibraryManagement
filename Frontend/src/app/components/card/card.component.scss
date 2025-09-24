@@ -1,0 +1,40 @@
+@use "variables" as *;
+
+.status-card {
+  cursor: pointer;
+  width: 100%;
+  background: $primary-bg;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: none;
+  padding: $space-32 $space-16;
+  text-align: center;
+}
+
+.icon-container {
+  margin-bottom: $space-12;
+
+  ::ng-deep .mat-icon {
+      height: unset !important;
+      width: unset !important;
+  }
+
+  .icon {
+    font-size: 40px;
+    color: $primary-tint;
+  }
+}
+
+.count-text {
+  font-size: $font-16;
+  font-weight: 600;
+  margin-bottom: $space-8;
+  color: $text-prim;
+}
+
+.status-text {
+  font-size: $font-14;
+  color: $text-light;
+}

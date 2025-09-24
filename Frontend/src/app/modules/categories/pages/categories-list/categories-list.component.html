@@ -1,0 +1,30 @@
+<div class="d-flex flex-column gap-30">
+  <div class="table-header d-flex align-items-center gap-10 flex-wrap">
+    <mat-icon>folder_open</mat-icon>
+    <div>
+      <h2 class="m-0">Categories</h2>
+      <p class="m-0">Categorize your book to connect it with similar topics</p>
+    </div>
+    <button mat-raised-button color="primary" class="d-flex align-items-center gap-5 ml-auto" (click)="openEditDialog()"><mat-icon>add</mat-icon> Add New Category</button>
+  </div>
+
+  <div>
+    <app-search-input [placeholder]="'Search books or authors...'"
+                      [suggestions]="categoriesTitles"
+                      (search)="onSearch($event)"
+                      (suggestionSelected)="onSelect($event)">
+    </app-search-input>
+  </div>
+
+  <div class="cards-container">
+    <ng-container *ngFor="let cat of categories">
+      <app-card icon="folder_open" [title]="cat.name" (click)="navigateToCategory(cat)">
+        <div class="d-flex align-items-center" actions>
+          <button class="table-action edit" (click)="$event.stopPropagation(); openEditDialog(cat)">Edit <mat-icon>create</mat-icon></button>
+          <button class="table-action delete" (click)="$event.stopPropagation(); openDeleteConfirmDialog(cat)"><mat-icon>delete_outline</mat-icon></button>
+        </div>
+      </app-card>
+    </ng-container>
+  </div>
+</div>
+

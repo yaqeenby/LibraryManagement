@@ -1,0 +1,26 @@
+@use "variables" as *;
+
+:host {
+  display: block;
+  background: white !important; // dark background
+  color: $primary-contrast !important;
+  border-radius: $space-16 !important;
+  padding: $space-16 !important;
+  font-family: 'Poppins', sans-serif !important;
+}
+
+h2 {
+  margin: 0 0 $space-12 0 !important;
+  font-weight: 600 !important;
+  color: $primary-contrast !important;
+  font-family: 'Poppins', sans-serif !important;
+}
+
+mat-dialog-content {
+  font-size: $font-14;
+  color: #ccc;
+}
+
+mat-dialog-actions {
+  margin-top: $space-16;
+}

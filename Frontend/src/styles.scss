@@ -1,0 +1,186 @@
+/* You can add global styles to this file, and also import other style files */
+
+@use "variables" as *;
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: $primary-soft;
+  margin: 0;
+}
+
+
+.d-flex {
+  display: flex;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.gap-5 {
+  gap: $space-5;
+}
+
+.gap-10 {
+  gap: $space-10;
+}
+
+.gap-15 {
+  gap: $space-15;
+}
+
+.gap-20 {
+  gap: $space-20;
+}
+
+.gap-30 {
+  gap: $space-30;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.align-items-end {
+  align-items: end;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.justify-content-end {
+  justify-content: end;
+}
+
+.flex-grow-1 {
+  flex-grow: 1;
+}
+
+.m-0 {
+  margin: 0;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.mat-mdc-header-row, .mat-mdc-row, .mdc-data-table__content {
+  font-size: $font-14 !important;
+  color: $text-prim !important;
+  border-bottom-color: $borders !important;
+  background-color: $primary-soft !important;
+  font-family: "Poppins", sans-serif !important;
+  height: 51px;
+}
+
+.mat-mdc-header-row {
+  background-color: $primary-contrast !important;
+}
+
+.table-header {
+  font-size: $font-14;
+  color: $text-prim;
+
+  h2 {
+  font-weight: 700;
+  }
+}
+
+.table-action {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: $space-10;
+  padding: $space-2 $space-5;
+  border-radius: $space-6;
+  border: $space-1 solid $prim-shade;
+  background: unset;
+  color: $text-prim;
+  font-size: $font-14;
+  font-family: "Poppins", sans-serif !important;
+  white-space: nowrap;
+
+  .mat-icon {
+    font-size: $font-16;
+    width: unset;
+    height: unset;
+  }
+}
+
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+table.mat-table {
+  min-width: 600px;
+}
+
+.mat-mdc-dialog-surface {
+    background-color: unset !important;
+}
+
+.mat-mdc-dialog-container .mat-mdc-dialog-title + .mat-mdc-dialog-content {
+  padding-top: $space-10 !important;
+}
+
+.mdc-text-field--outlined:not(.mdc-text-field--disabled) .mat-mdc-notch-piece {
+  border-width: $space-2 !important;
+}
+
+.mdc-floating-label {
+  font-size: $font-14 !important;
+  font-family: "Poppins", sans-serif !important;
+}
+
+button[mat-button], button[mat-raised-button] {
+  background-color: $Com-success-2 !important;
+  padding: $space-10 $space-15 !important;
+  border-radius: $space-10 !important;
+  color: $btn-prim-text-click-focus !important;
+  font-family: "Poppins", sans-serif !important;
+  font-size: $font-14 !important;
+  border: none !important;
+}
+
+button[mat-button] {
+  background-color: unset !important;
+}
+
+.mat-mdc-form-field, .mdc-text-field__input {
+  font-family: 'Poppins', sans-serif !important;
+}
+
+.delete-icon {
+  color: $text-prim;
+  font-size: $font-16;
+  background-color: unset;
+  box-shadow: unset;
+  border: none;
+  cursor: pointer;
+}
+
+.mat-icon {
+    overflow: visible !important;
+}

@@ -1,0 +1,10 @@
+<div class="menu-item menu-header"
+     [ngClass]="variant"
+     [class.selected]="selected"
+     *ngIf="item"
+     (click)="onClickItem()">
+  <div class="icon">
+    <mat-icon>{{item.icon}}</mat-icon>
+  </div>
+  <span class="label">{{ item.label }}</span>
+</div>
