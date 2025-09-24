@@ -125,3 +125,10 @@ Total	                              2 - 3 working days        2 working days
 
 Using AI tools helped speed up the development process. 
 However, due to my limited subscription, I couldn’t rely on them throughout the entire process as I was occasionally blocked.
+
+---
+
+## 🗄️ Database Setup
+1. Open SQL Server.
+2. Run the script inside `/db/library_db.sql`.
+3. Database will be created with tables and stored procedures.
