@@ -19,6 +19,7 @@ export class ViewBooksComponent {
   @Input() desc: string = '';
   @Input() categoryId: number | null = null;
   @Input() viewEdit: boolean = true;
+  @Input() showBack: boolean = false;
   @Input() books: Book[] = [];
   @Input() bookTitles: string[] = [];
   @Input() categories: Category[] = [];
@@ -26,6 +27,7 @@ export class ViewBooksComponent {
   displayedColumns: string[] = ['id', 'title', 'author', 'categories', 'action'];
 
   @Output() reloadBooks: EventEmitter<string> = new EventEmitter<string>();
+  @Output() back: EventEmitter<boolean> = new EventEmitter<boolean>();
 
   private destroy$ = new Subject<void>();
 

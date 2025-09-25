@@ -5,4 +5,6 @@
                 [bookTitles]="bookTitles"
                 [categories]="category ? [category] : []"
                 [viewEdit]="false"
+                [showBack]="true"
+                (back)="back()"
                 (reloadBooks)="loadBooksByCategory($event)"></app-view-books>

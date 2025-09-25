@@ -85,6 +85,10 @@ body {
   width: 100%;
 }
 
+.cursor-pointer {
+    cursor: pointer;
+}
+
 .mat-mdc-header-row, .mat-mdc-row, .mdc-data-table__content {
   font-size: $font-14 !important;
   color: $text-prim !important;

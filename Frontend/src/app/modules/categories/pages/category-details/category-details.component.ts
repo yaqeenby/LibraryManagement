@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Category } from '../../models/category.model';
 import { CategoryService } from '../../services/category.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ErrorCode } from '../../../../enums/errorCode.enum';
 import { ToasterService } from '../../../../services/toaster.service';
 import { BookService } from '../../../books/services/book.service';
@@ -25,6 +25,7 @@ export class CategoryDetailsComponent implements OnInit {
   constructor(private _categoryService: CategoryService,
     private _bookService: BookService,
     private _activatedRoute: ActivatedRoute,
+    private _router: Router,
     private _toasterService: ToasterService) {
 
   }
@@ -71,6 +72,10 @@ export class CategoryDetailsComponent implements OnInit {
         },
         error: (err) => this._toasterService.success('Error fetching books', err.message)
       });
+  }
+
+  back() {
+    this._router.navigate(['/categories/list']);
   }
 
   ngOnDestroy(): void {

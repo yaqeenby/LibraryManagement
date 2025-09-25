@@ -1,6 +1,9 @@
 <div class="d-flex flex-column gap-30" *ngIf="books">
   <div class="table-header d-flex align-items-center gap-10 flex-wrap">
+    <mat-icon *ngIf="showBack" (click)="back.emit()" class="cursor-pointer">keyboard_backspace</mat-icon>
+
     <mat-icon>library_books</mat-icon>
+
     <div>
       <h2 class="m-0">{{title}}</h2>
       <p class="m-0">{{desc}}</p>
