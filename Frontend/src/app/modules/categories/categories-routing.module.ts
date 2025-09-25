@@ -6,11 +6,11 @@ import { CategoryDetailsComponent } from './pages/category-details/category-deta
 const routes: Routes = [
   { path: '', redirectTo: 'list', pathMatch: 'full' }, // default route
   {
-    path: 'list', component: CategoriesListComponent,
-    //canMatch: [ActiveRouteGuard],
-    //data: { activeRoute: ActiveRouting.Categories },
+    path: 'list', component: CategoriesListComponent
   },
-  { path: 'details/:id', component: CategoryDetailsComponent },
+  {
+    path: 'details/:id', component: CategoryDetailsComponent,
+  },
 ];
 
 @NgModule({

@@ -14,7 +14,7 @@ export class ActiveRouteGuard implements CanMatch {
     segments: UrlSegment[]
   ): boolean | Observable<boolean> | Promise<boolean> {
     if (route.data && route.data['activeRoute']) {
-      this.activeRoutingService.setActiveRoute(route.data['activeRoute']);
+      this.activeRoutingService.setActiveRoute(route.data['activeRoute'], false);
     }
     return true;
   }

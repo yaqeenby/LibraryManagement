@@ -34,14 +34,17 @@ export class ActiveRoutingService {
 
   constructor(private router: Router, private route: ActivatedRoute) { }
 
-  setActiveRoute(activeRoute: ActiveRouting) {
+  setActiveRoute(activeRoute: ActiveRouting, navigate: boolean = true) {
     this.activeRoute = activeRoute;
     this.activeRouteChanged.emit(this.activeRoute);
 
     let route = this.routes.find(r => r.id == activeRoute);
     if (route) {
       this.activeRouteIcon = route.icon;
-      this.router.navigate([route.route]);
+
+      if (navigate) {
+        this.router.navigate([route.route]);
+      }
     }
   }
 }

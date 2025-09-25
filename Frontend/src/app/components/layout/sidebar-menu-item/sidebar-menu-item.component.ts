@@ -18,6 +18,6 @@ export class SidebarMenuItemComponent {
 
   onClickItem() {
     if (this.item)
-    this.activeRoutingService.setActiveRoute(this.item.id);
+      this.activeRoutingService.setActiveRoute(this.item.id);
   }
 }

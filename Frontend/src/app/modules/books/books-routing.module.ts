@@ -7,8 +7,6 @@ const routes: Routes = [
   {
     path: 'list',
     component: BooksListComponent,
-    //canMatch: [ActiveRouteGuard],
-    //data: { activeRoute: ActiveRouting.Books },
   //  resolve: { books: BooksResolver } 
   },
 //  { path: 'add-book', component: AddBookComponent },
