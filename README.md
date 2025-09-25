@@ -39,7 +39,7 @@ Books can belong to multiple categories, and users can add, edit, search, and fi
 
 ### ✅ Prerequisites
 
-- Node v20+
+- .NET Core v8+
 - Angular CLI v19+
 - Package Manager v10+
 
@@ -132,4 +132,5 @@ However, due to my limited subscription, I couldn’t rely on them throughout th
 1. Open SQL Server.
 2. Run the script inside `/db/library_db.sql`.
 3. Database will be created with tables and stored procedures.
+
 
