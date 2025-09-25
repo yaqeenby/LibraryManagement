@@ -4,8 +4,19 @@
     <mat-form-field appearance="outline" class="w-100">
       <mat-label>Name</mat-label>
       <input matInput formControlName="name" />
-      <mat-error *ngIf="categoryForm.get('name')?.touched && categoryForm.get('name')?.invalid">
+      <!-- Required -->
+      <mat-error *ngIf="categoryForm.get('name')?.hasError('required')">
         Name is required
+      </mat-error>
+
+      <!-- Minimum length -->
+      <mat-error *ngIf="categoryForm.get('name')?.hasError('minlength')">
+        Name must be at least 2 characters
+      </mat-error>
+
+      <!-- Maximum length -->
+      <mat-error *ngIf="categoryForm.get('name')?.hasError('maxlength')">
+        Name cannot exceed 100 characters
       </mat-error>
     </mat-form-field>
 

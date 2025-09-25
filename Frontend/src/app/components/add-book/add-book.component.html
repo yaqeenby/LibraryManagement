@@ -4,16 +4,39 @@
     <mat-form-field appearance="outline" class="w-100">
       <mat-label>Title</mat-label>
       <input matInput formControlName="title" />
-      <mat-error *ngIf="bookForm.get('title')?.touched && bookForm.get('title')?.invalid">
+      <!-- Required -->
+      <mat-error *ngIf="bookForm.get('title')?.hasError('required')">
         Title is required
       </mat-error>
+
+      <!-- Minimum length -->
+      <mat-error *ngIf="bookForm.get('title')?.hasError('minlength')">
+        Title must be at least 2 characters
+      </mat-error>
+
+      <!-- Maximum length -->
+      <mat-error *ngIf="bookForm.get('title')?.hasError('maxlength')">
+        Title cannot exceed 100 characters
+      </mat-error>
+
     </mat-form-field>
 
     <mat-form-field appearance="outline" class="w-100">
       <mat-label>Author</mat-label>
       <input matInput formControlName="author" />
-      <mat-error *ngIf="bookForm.get('author')?.touched && bookForm.get('author')?.invalid">
+      <!-- Required -->
+      <mat-error *ngIf="bookForm.get('author')?.hasError('required')">
         Author is required
+      </mat-error>
+
+      <!-- Minimum length -->
+      <mat-error *ngIf="bookForm.get('author')?.hasError('minlength')">
+        Author must be at least 2 characters
+      </mat-error>
+
+      <!-- Maximum length -->
+      <mat-error *ngIf="bookForm.get('author')?.hasError('maxlength')">
+        Author cannot exceed 100 characters
       </mat-error>
     </mat-form-field>
 

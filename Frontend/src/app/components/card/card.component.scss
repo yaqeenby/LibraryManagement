@@ -32,6 +32,10 @@
   font-weight: 600;
   margin-bottom: $space-8;
   color: $text-prim;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 100%;
 }
 
 .status-text {

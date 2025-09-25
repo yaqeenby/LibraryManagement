@@ -38,8 +38,8 @@ export class AddBookComponent {
     this.categoryId = data.categoryId;
 
     this.bookForm = this.fb.group({
-      title: ['', Validators.required],
-      author: ['', Validators.required],
+      title: ['', [Validators.required, Validators.minLength(2), Validators.maxLength(100)]],
+      author: ['', [Validators.required, Validators.minLength(2), Validators.maxLength(100)]],
       categories: [this.categoryId ? [this.categoryId] : '']
     });
 

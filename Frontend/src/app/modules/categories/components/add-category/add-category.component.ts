@@ -28,7 +28,7 @@ export class AddCategoryComponent {
     this.category = data;
 
     this.categoryForm = this.fb.group({
-      name: ['', Validators.required]
+      name: ['', [Validators.required, Validators.minLength(2), Validators.maxLength(100)]]
     });
 
     if (this.category) {
