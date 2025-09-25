@@ -40,10 +40,10 @@ export class BooksListComponent {
             this.books = data.data;
             this.bookTitles = data.data.map(book => book.title);
           } else {
-            this._toasterService.success('Error fetching books', data.message);
+            this._toasterService.error('Error fetching books', data.message);
           }
         },
-        error: (err) => this._toasterService.success('Error fetching books', err.message)
+        error: (err) => this._toasterService.error('Error fetching books', err.message)
       });
   }
 
@@ -55,10 +55,10 @@ export class BooksListComponent {
           if (data.errorCode === ErrorCode.Success) {
             this.categories = data.data;
           } else {
-            this._toasterService.success('Error fetching categories', data.message);
+            this._toasterService.error('Error fetching categories', data.message);
           }
         },
-        error: (err) => this._toasterService.success('Error fetching categories', err.message)
+        error: (err) => this._toasterService.error('Error fetching categories', err.message)
       });
   }
 

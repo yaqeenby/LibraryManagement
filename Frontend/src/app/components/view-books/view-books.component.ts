@@ -79,10 +79,10 @@ export class ViewBooksComponent {
             this.reloadBooks.emit();
             this._toasterService.success('Deleted Successfully!');
           } else {
-            this._toasterService.success('Error', data.message);
+            this._toasterService.error('Error', data.message);
           }
         },
-        error: (err) => this._toasterService.success('Error', err.message)
+        error: (err) => this._toasterService.error('Error', err.message)
       });
   }
 
@@ -108,10 +108,10 @@ export class ViewBooksComponent {
             this.reloadBooks.emit();
             this._toasterService.success('Deleted Successfully!');
           } else {
-            this._toasterService.success('Error', data.message);
+            this._toasterService.error('Error', data.message);
           }
         },
-        error: (err) => this._toasterService.success('Error', err.message)
+        error: (err) => this._toasterService.error('Error', err.message)
       });
 
   }

@@ -66,10 +66,10 @@ export class AddBookComponent {
                 this._toasterService.success('Book Updated Successfully');
                 this.dialogRef.close(this.bookForm.value);
               } else {
-                this._toasterService.success('Something Went Wrong', res.message);
+                this._toasterService.error('Something Went Wrong', res.message);
               }
             },
-            error: (error) => this._toasterService.success('Something Went Wrong', error.message)
+            error: (error) => this._toasterService.error('Something Went Wrong', error.message)
           });
       } else {
         this._bookService.createBook(this.bookForm.value)
@@ -80,10 +80,10 @@ export class AddBookComponent {
                 this._toasterService.success('Book Added Successfully');
                 this.dialogRef.close(this.bookForm.value);
               } else {
-                this._toasterService.success('Something Went Wrong', res.message);
+                this._toasterService.error('Something Went Wrong', res.message);
               }
             },
-            error: (error) => this._toasterService.success('Something Went Wrong', error.message)
+            error: (error) => this._toasterService.error('Something Went Wrong', error.message)
           });
       }
     } else {

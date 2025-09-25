@@ -67,10 +67,10 @@ export class CategoryDetailsComponent implements OnInit {
             this.books = data.data;
             this.bookTitles = data.data.map(book => book.title);
           } else {
-            this._toasterService.success('Error fetching books', data.message);
+            this._toasterService.error('Error fetching books', data.message);
           }
         },
-        error: (err) => this._toasterService.success('Error fetching books', err.message)
+        error: (err) => this._toasterService.error('Error fetching books', err.message)
       });
   }
 

@@ -48,10 +48,10 @@ export class AddCategoryComponent {
                 this._toasterService.success('Category Updated Successfully');
                 this.dialogRef.close(this.categoryForm.value);
               } else {
-                this._toasterService.success('Something Went Wrong', res.message);
+                this._toasterService.error('Something Went Wrong', res.message);
               }
             },
-            error: (error) => this._toasterService.success('Something Went Wrong', error.message)
+            error: (error) => this._toasterService.error('Something Went Wrong', error.message)
           });
       } else {
         this._categoryService.createCategory(this.categoryForm.value)
@@ -62,10 +62,10 @@ export class AddCategoryComponent {
                 this._toasterService.success('Category Added Successfully');
                 this.dialogRef.close(this.categoryForm.value);
               } else {
-                this._toasterService.success('Something Went Wrong', res.message);
+                this._toasterService.error('Something Went Wrong', res.message);
               }
             },
-            error: (error) => this._toasterService.success('Something Went Wrong', error.message)
+            error: (error) => this._toasterService.error('Something Went Wrong', error.message)
           });
       }
 

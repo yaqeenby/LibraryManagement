@@ -39,10 +39,10 @@ export class CategoriesListComponent {
             this.categories = data.data;
             this.categoriesTitles = data.data.map(cat => cat.name);
           } else {
-            this._toasterService.success('Error fetching categories', data.message);
+            this._toasterService.error('Error fetching categories', data.message);
           }
         },
-        error: (err) => this._toasterService.success('Error fetching categories', err.message)
+        error: (err) => this._toasterService.error('Error fetching categories', err.message)
       });
   }
 
@@ -86,10 +86,10 @@ export class CategoriesListComponent {
             this.loadCategories();
             this._toasterService.success('Deleted Successfully!');
           } else {
-            this._toasterService.success('Error', data.message);
+            this._toasterService.error('Error', data.message);
           }
         },
-        error: (err) => this._toasterService.success('Error', err.message)
+        error: (err) => this._toasterService.error('Error', err.message)
       });
   }
 
