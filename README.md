@@ -60,8 +60,8 @@ npm install
 
 ### Run
 
-Run Backend 
-Run Frontend `npm start` and then navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+# 1. Run Backend 
+# 2. Run Frontend `npm start` and then navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
 ---
 
@@ -133,6 +133,7 @@ However, due to my limited subscription, I couldn’t rely on them throughout th
 1. Open SQL Server.
 2. Run the script inside `/db/library_db.sql`.
 3. Database will be created with tables and stored procedures.
+
 
 
 
