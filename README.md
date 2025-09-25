@@ -60,7 +60,8 @@ npm install
 
 ### Run
 
-Run `npm start` and then navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Run Backend 
+Run Frontend `npm start` and then navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
 ---
 
@@ -83,10 +84,10 @@ Use ADO.NET + Stored Procedure for “Get All Books with Category.”
 Enable Swagger for API documentation.
 based on this task help me to start build the structure of project and layers”
 
-  - after he give me the plan and i review it i ask some questions like "where i should pul repo interfaces like IBookRepo in projec" .. etc.
+  - after he give me the plan and i review it i ask some questions like "where i should put repo interfaces like IBookRepo in projec" .. etc.
   - then i build the project and folders and files after that i ask to give me the implementation for each file from conroller to service to repo
-  - i review each line of code and start to ask him to edit some point like to handle general api response, add search an filtering, add api's line remove book from category
-  - for categor's api i do it manualy since i blocked due to my limited subscription so i try to follow same design we use it in book api's
+  - i review each line of code and start to ask him to edit some point like handle general api response, add search an filtering, add api's like remove book from category
+  - for categories api's i do it manualy since i blocked due to my limited subscription so i try to follow same design we use it in book api's
 
 for the frontend i ask them something like:
 “using angular material & form builder create form to add book”
@@ -132,5 +133,6 @@ However, due to my limited subscription, I couldn’t rely on them throughout th
 1. Open SQL Server.
 2. Run the script inside `/db/library_db.sql`.
 3. Database will be created with tables and stored procedures.
+
 
 
